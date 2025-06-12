@@ -1,0 +1,78 @@
+# Q1. L is a list defined as L= [11, 12, 13, 14].
+
+L= [11, 12, 13, 14]
+# (i)WAP to add 50 and 60 to L.
+L.append(50)
+L.append(60)
+print(L)
+
+# (ii)WAP to remove 11 and 13from L.
+L.remove(11)
+L.remove(13)
+print("remove 11 and 13from L ",L)
+
+# (iii)WAP to sort L in ascending order.
+L= [11, 12, 13, 14]
+L.sort()
+print("L sorted in ascending order ",L)
+
+# (iv)WAP to sort L in descending order.
+L.sort(reverse=True)
+print("L sorted in descending order ",L)
+
+# (v)WAP to search for 13 in L.
+L= [11, 12, 13, 14]
+for i in L:
+  if i==13:
+    print("Found 13!")
+
+# (vi) WAP to count the number of elements present in L.
+cnt=0
+for i in L:
+  cnt+=1
+print("Number of elements in L ",cnt)
+# or
+print("Number of elements in L ",len(L))
+
+# (vii) WAP to sum all the elements in L.
+add=0
+for i in L:
+  add+=i
+print("Sum of all the numbers in L is ",add)
+
+# (viii) WAP to sum all ODD numbers in L.
+odd_sum=0
+for i in L:
+  if i%2!=0:
+    odd_sum+=i
+print("sum of all odd numbers ",odd_sum)
+
+# (ix) WAP to sum all EVEN numbers in L.
+even_sum=0
+for i in L:
+  if i%2==0:
+    even_sum+=i
+print("sum of all even numbers ",even_sum)
+
+# (x) WAP to sum all PRIME numbers in L.
+prime_sum=0
+for n in L:
+  if n<2:
+    continue
+  is_prime=True
+  for i in range(2, int(n**0.5) + 1):
+    if n % i == 0:
+        is_prime = False
+        break
+    if is_prime:
+        prime_sum += n
+print("sum of prime numbers ", prime_sum)
+
+
+# (xi) WAP to clear all the elements in L.
+L.clear()
+print("Cleared L ",L)
+
+
+# (xii) WAP to delete L.
+del L
